@@ -197,14 +197,14 @@ export default function TaskCard({
               <p className="text-[9px] text-white">BM</p>
             </div>
 
-            <span className="text-sm">Bright Munemu</span>
+            {/* <span className="text-sm">Bright Munemu</span> */}
           </div>
         </div>
         <div className="grid grid-flow-col justify-self-start items-center gap-1">
           <div className="grid place-items-center bg-white border-2 border-blue-700 rounded-md">
-            <Icon type={Icons.Check} size={12} color="black" />
+            <Icon type={Icons.Check} size={10} color="black" />
           </div>
-          <span>EN-{task.id}</span>
+          <span className="text-sm">EN-{task.id}</span>
         </div>
       </div>
 
