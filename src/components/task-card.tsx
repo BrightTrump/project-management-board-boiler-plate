@@ -75,10 +75,20 @@ export default function TaskCard({
         <div className="grid grid-rows-[auto auto auto] gap-4">
           {/* Task Title */}
           <div className="text-[#252525]">
-            <p className="my-auto whitespace-pre-wrap pb-1 text-sm">{title}</p>
+            <p
+              className="my-auto whitespace-pre-wrap pb-1 text-sm"
+              onClick={() => setEditTitle(true)}
+            >
+              {title}
+            </p>
 
             {/* MVP 1 (Editable) */}
-            <p className="my-auto whitespace-pre-wrap text-xs">{label}</p>
+            <p
+              className="my-auto whitespace-pre-wrap text-xs"
+              onClick={() => setEditLabel(true)}
+            >
+              {label}
+            </p>
           </div>
 
           <div className="w-fit grid grid-cols-[auto_1fr] gap-1 items-center bg-[#f5d9d6] rounded-3xl py-1 px-2">
@@ -86,11 +96,19 @@ export default function TaskCard({
             <p className="text-[#F04438] text-xs">High</p>
           </div>
 
-          <div className="grid grid-flow-col gap-1 items-center text-[#252525]">
+          <div className="grid grid-flow-col justify-between items-center text-[#252525]">
+            <div className="grid grid-flow-col justify-self-start items-center gap-1">
+              <div className="grid place-items-center bg-white border-2 border-blue-700 rounded-md">
+                <Icon type={Icons.Check} size={10} color="black" />
+              </div>
+              <span className="text-sm">EN-{task.id}</span>
+            </div>
+
             <div className="grid grid-cols-[auto_1fr] gap-1 items-center">
               <Icon type={Icons.Calendar} size={16} color="#252525" />
               <p>27/2/25</p>
             </div>
+
             <div className="grid grid-cols-[auto_1fr] gap-1 items-center">
               {/* <PhotoViewer
                 size={20}
@@ -98,10 +116,11 @@ export default function TaskCard({
                 firstLetter={profile?.firstName[0] || ""}
                 secondLetter={profile?.lastName[0] || ""}
               /> */}
-              <div className="h-6 w-6 rounded-full bg-primary">BM</div>
-              <div>
-                <span className="text-sm">Bright Munemu</span>
+              <div className="h-5 w-5 rounded-full bg-blue-700 grid place-items-center">
+                <p className="text-[9px] text-white">BM</p>
               </div>
+
+              {/* <span className="text-sm">Bright Munemu</span> */}
             </div>
           </div>
         </div>
@@ -190,7 +209,7 @@ export default function TaskCard({
           </div>
 
           <div className="grid grid-cols-[auto_1fr] gap-1 items-center">
-            <Icon type={Icons.Calendar} size={16} color="#252525" />
+            <Icon type={Icons.Calendar} size={16} color="#005AFF" />
             <p>27/2/25</p>
           </div>
 

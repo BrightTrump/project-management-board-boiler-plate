@@ -53,7 +53,7 @@ export default function ColumnContainer({
       <div
         ref={setNodeRef}
         style={style}
-        className="bg-borderColor w-[274px] h-[700px] font-semibold text-sm rounded-md opacity-60 border-2 border-black"
+        className="bg-borderColor w-[274px] h-screen font-semibold text-sm rounded-md opacity-60 border-2 border-black"
       />
     );
   }
@@ -62,7 +62,7 @@ export default function ColumnContainer({
     <div
       ref={setNodeRef}
       style={style}
-      className="grid grid-rows-[auto_1fr_auto] gap-1 bg-[#F8F8F8] w-[274px] h-[700px] font-semibold text-sm rounded-sm"
+      className="grid grid-rows-[auto_1fr_auto] gap-1 bg-[#F8F8F8] w-[274px] h-screen font-semibold text-sm rounded-sm"
     >
       {/* Column Header */}
       <div

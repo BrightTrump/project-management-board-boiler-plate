@@ -28,6 +28,7 @@ const generateId = () => {
 export default function TasksBoardView() {
   const [columns, setColumns] = useState<Column[]>([]);
   const [tasks, setTasks] = useState<Task[]>([]);
+  const [iscentered, setiscentered] = useState(true);
   // console.log(columns);
   const columnsId = useMemo(
     () => columns.map((col) => col.id ?? generateId()),
@@ -158,7 +159,7 @@ export default function TasksBoardView() {
   };
 
   return (
-    <div className="mx-auto w-full grid justify-start overflow-x-auto custom-scroll-bar">
+    <div className="m-10 w-full h-screen grid justify-start overflow-x-auto custom-scroll-bar">
       <DndContext
         sensors={sensors}
         onDragStart={onDragStart}
@@ -182,7 +183,12 @@ export default function TasksBoardView() {
           </SortableContext>
 
           {/* Add Column Button Stays at the Right */}
-          <div className="flex justify-start">
+          {/* <div className="flex justify-start"> */}
+          <div
+            className={`${
+              iscentered ? "mx-auto" : "ml-0"
+            } grid place-items-center transition-all`}
+          >
             <Button
               type="submit"
               onClick={createNewColumn}
