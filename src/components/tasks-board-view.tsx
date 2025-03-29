@@ -51,6 +51,7 @@ export default function TasksBoardView() {
       title: `Column ${columns.length + 1}`,
     };
     setColumns([...columns, columnToAdd]);
+    setiscentered(false);
   };
 
   const createTask = (columnId: Id) => {
@@ -159,7 +160,7 @@ export default function TasksBoardView() {
   };
 
   return (
-    <div className="m-10 w-full h-screen grid justify-start overflow-x-auto custom-scroll-bar">
+    <div className="w-full h-screen grid justify-start overflow-x-auto custom-scroll-bar">
       <DndContext
         sensors={sensors}
         onDragStart={onDragStart}
@@ -186,8 +187,10 @@ export default function TasksBoardView() {
           {/* <div className="flex justify-start"> */}
           <div
             className={`${
-              iscentered ? "mx-auto" : "ml-0"
-            } grid place-items-center transition-all`}
+              iscentered
+                ? "mx-auto grid place-items-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500"
+                : "ml-0"
+            } `}
           >
             <Button
               type="submit"

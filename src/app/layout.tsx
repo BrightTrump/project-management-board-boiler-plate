@@ -23,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={lato.className} suppressHydrationWarning={true}>
-        <main className="bg-white">{children}</main>
+        <main className="bg-white w-full mx-auto grid place-items-center">
+          {children}
+        </main>
       </body>
     </html>
   );

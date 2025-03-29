@@ -232,7 +232,7 @@ export default function TaskCard({
       {mouseIsOver && (
         <button
           onClick={() => deleteTask(task.id!)}
-          className="p-2 rounded-md absolute right-0 top-0 hover:bg-[#DFDFDF] opacity-60 hover:opacity-100"
+          className="p-2 rounded-md absolute right-0 top-0 hover:bg-[#f8f6f6] opacity-60 hover:opacity-100"
         >
           <Icon type={Icons.Bin} size={16} color="#005AFF" />
         </button>
