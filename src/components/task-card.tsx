@@ -182,10 +182,18 @@ export default function TaskCard({
         </div>
 
         <div className="grid grid-flow-col justify-between items-center text-[#252525]">
+          <div className="grid grid-flow-col justify-self-start items-center gap-1">
+            <div className="grid place-items-center bg-white border-2 border-blue-700 rounded-md">
+              <Icon type={Icons.Check} size={10} color="black" />
+            </div>
+            <span className="text-sm">EN-{task.id}</span>
+          </div>
+
           <div className="grid grid-cols-[auto_1fr] gap-1 items-center">
             <Icon type={Icons.Calendar} size={16} color="#252525" />
             <p>27/2/25</p>
           </div>
+
           <div className="grid grid-cols-[auto_1fr] gap-1 items-center">
             {/* <PhotoViewer
                 size={20}
@@ -199,12 +207,6 @@ export default function TaskCard({
 
             {/* <span className="text-sm">Bright Munemu</span> */}
           </div>
-        </div>
-        <div className="grid grid-flow-col justify-self-start items-center gap-1">
-          <div className="grid place-items-center bg-white border-2 border-blue-700 rounded-md">
-            <Icon type={Icons.Check} size={10} color="black" />
-          </div>
-          <span className="text-sm">EN-{task.id}</span>
         </div>
       </div>
 

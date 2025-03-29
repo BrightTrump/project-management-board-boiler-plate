@@ -158,7 +158,7 @@ export default function TasksBoardView() {
   };
 
   return (
-    <div className="h-screen p-10 w-full grid justify-start overflow-x-auto custom-scroll-bar">
+    <div className="mx-auto w-full grid justify-start overflow-x-auto custom-scroll-bar">
       <DndContext
         sensors={sensors}
         onDragStart={onDragStart}
