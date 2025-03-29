@@ -200,6 +200,12 @@ export default function TaskCard({
             <span className="text-sm">Bright Munemu</span>
           </div>
         </div>
+        <div className="grid grid-flow-col justify-self-start items-center gap-1">
+          <div className="grid place-items-center bg-white border-2 border-blue-700 rounded-md">
+            <Icon type={Icons.Check} size={12} color="black" />
+          </div>
+          <span>EN-{task.id}</span>
+        </div>
       </div>
 
       {mouseIsOver && (

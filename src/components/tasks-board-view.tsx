@@ -17,9 +17,14 @@ import { arrayMove, SortableContext } from "@dnd-kit/sortable";
 import { createPortal } from "react-dom";
 import TaskCard from "./task-card";
 
+// Generate Id for column and task
 const generateId = () => {
   return Math.floor(Math.random() * 10000);
 };
+// let columnCounter = 1;
+// let taskCounter = 1;
+// const generateColumnId = () => columnCounter++;
+// const generateTaskId = () => taskCounter++;
 export default function TasksBoardView() {
   const [columns, setColumns] = useState<Column[]>([]);
   const [tasks, setTasks] = useState<Task[]>([]);

@@ -19,6 +19,5 @@ export enum Icons {
   GroupPlus = "group-plus",
   Milestone = "milestone",
   Plus = "plus",
-  RoundCalendar = "round-calendar",
   TableBin = "tableBin",
 }

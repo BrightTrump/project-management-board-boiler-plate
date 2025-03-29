@@ -10,7 +10,6 @@ import TableBin from "./table-bin";
 import GroupMinus from "./group-minus";
 import GroupPlus from "./group-plus";
 import CheckIn from "./Check-in";
-import RoundCalender from "./round-calender";
 import Plus from "./plus";
 import EditSquare from "./edit-square";
 import Ellipse from "./ellipse";
@@ -68,9 +67,6 @@ export function Icon({ type, color, size }: Props) {
 
     case Icons.Plus:
       return <Plus {...props} />;
-
-    case Icons.RoundCalendar:
-      return <RoundCalender {...props} />;
 
     case Icons.TableBin:
       return <TableBin {...props} />;
