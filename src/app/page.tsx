@@ -3,7 +3,7 @@ import TasksBoardView from "@/components/tasks-board-view";
 
 export default function Page() {
   return (
-    <div className="mx-5">
+    <div className="ml-10">
       <TasksBoardView />
     </div>
   );
