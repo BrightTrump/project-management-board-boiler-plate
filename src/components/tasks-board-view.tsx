@@ -190,7 +190,7 @@ export default function TasksBoardView() {
               iscentered
                 ? "mx-auto grid place-items-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500"
                 : "ml-0"
-            } `}
+            } mt-32`}
           >
             <Button
               type="submit"
